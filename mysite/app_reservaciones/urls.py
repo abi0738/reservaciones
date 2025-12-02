@@ -31,4 +31,11 @@ urlpatterns = [
     path('pagos/editar/<int:id>/', views.editar_pago, name='editar_pago'),
     path('pagos/detalle/<int:id>/', views.detalle_pago, name='detalle_pago'),
     path('pagos/eliminar/<int:id>/', views.eliminar_pago, name='eliminar_pago'),
+
+    # URLs para Empleado
+    path('empleados/', views.listar_empleados, name='listar_empleados'),
+    path('empleados/crear/', views.crear_empleado, name='crear_empleado'),
+    path('empleados/editar/<int:id>/', views.editar_empleado, name='editar_empleado'),
+    path('empleados/detalle/<int:id>/', views.detalle_empleado, name='detalle_empleado'),
+    path('empleados/eliminar/<int:id>/', views.eliminar_empleado, name='eliminar_empleado'),
 ]

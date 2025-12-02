@@ -1,5 +1,5 @@
 from django import forms
-from .models import Cliente, Habitacion, Reserva, Pago
+from .models import Cliente, Habitacion, Reserva, Pago, Empleado
 
 class ClienteForm(forms.ModelForm):
     class Meta:
@@ -26,4 +26,12 @@ class PagoForm(forms.ModelForm):
         fields = ['reserva', 'monto', 'fecha_pago', 'metodo_pago']
         widgets = {
             'fecha_pago': forms.DateInput(attrs={'type': 'date'}),
+        }
+
+class EmpleadoForm(forms.ModelForm):
+    class Meta:
+        model = Empleado
+        fields = ['nombre', 'puesto', 'salario', 'fecha_contratacion']
+        widgets = {
+            'fecha_contratacion': forms.DateInput(attrs={'type': 'date'}),
         }

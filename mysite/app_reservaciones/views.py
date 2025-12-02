@@ -1,9 +1,9 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Cliente, Habitacion, Reserva, Pago
-from .forms import ClienteForm, HabitacionForm, ReservaForm, PagoForm
+from .models import Cliente, Habitacion, Reserva, Pago, Empleado
+from .forms import ClienteForm, HabitacionForm, ReservaForm, PagoForm, EmpleadoForm
 
 def home(request):
-    return redirect('listar_clientes')
+    return render(request, 'index.html')
 
 # Vistas para Cliente
 def listar_clientes(request):
@@ -106,7 +106,6 @@ def detalle_reserva(request, id):
     reserva = get_object_or_404(Reserva, id=id)
     return render(request, 'reservas/detalle_reserva.html', {'reserva': reserva})
 
-
 def eliminar_reserva(request, id):
     reserva = get_object_or_404(Reserva, id=id)
     if request.method == 'POST':
@@ -149,3 +148,39 @@ def eliminar_pago(request, id):
         pago.delete()
         return redirect('listar_pagos')
     return redirect('listar_pagos')
+
+# Vistas para Empleado
+def listar_empleados(request):
+    empleados = Empleado.objects.all()
+    return render(request, 'empleados/listar_empleados.html', {'empleados': empleados})
+
+def crear_empleado(request):
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('listar_empleados')
+    else:
+        form = EmpleadoForm()
+    return render(request, 'empleados/crear_empleado.html', {'form': form})
+
+def editar_empleado(request, id):
+    empleado = get_object_or_404(Empleado, id=id)
+    form = EmpleadoForm(instance=empleado)
+    if request.method == 'POST':
+        form = EmpleadoForm(request.POST, instance=empleado)
+        if form.is_valid():
+            form.save()
+            return redirect('listar_empleados')
+    return render(request, 'empleados/editar_empleado.html', {'form': form, 'empleado': empleado})
+
+def detalle_empleado(request, id):
+    empleado = get_object_or_404(Empleado, id=id)
+    return render(request, 'empleados/detalle_empleado.html', {'empleado': empleado})
+
+def eliminar_empleado(request, id):
+    empleado = get_object_or_404(Empleado, id=id)
+    if request.method == 'POST':
+        empleado.delete()
+        return redirect('listar_empleados')
+    return redirect('listar_empleados')
