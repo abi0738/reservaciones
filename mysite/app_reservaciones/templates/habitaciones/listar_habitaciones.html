@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% csrf_token %}
+{% block title %}Habitaciones{% endblock %}
+
+{% block content %}
+<h2>Habitaciones</h2>
+<a href="{% url 'crear_habitacion' %}" class="btn btn-primary mb-3">Registrar Nueva Habitación</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Número</th>
+            <th>Tipo</th>
+            <th>Precio por Noche</th>
+            <th>Estado</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for habitacion in habitaciones %}
+        <tr>
+            <td><a href="{% url 'detalle_habitacion' habitacion.id %}">{{ habitacion.numero }}</a></td>
+            <td>{{ habitacion.tipo }}</td>
+            <td>{{ habitacion.precio_noche }}</td>
+            <td>{{ habitacion.estado }}</td>
+            <td>
+                <a href="{% url 'editar_habitacion' habitacion.id %}" class="btn btn-secondary btn-sm">Editar</a>
+                <form action="{% url 'eliminar_habitacion' habitacion.id %}" method="POST" style="display: inline-block;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

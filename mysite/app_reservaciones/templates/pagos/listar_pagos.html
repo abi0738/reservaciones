@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% csrf_token %}
+{% block title %}Pagos{% endblock %}
+
+{% block content %}
+<h2>Pagos</h2>
+<a href="{% url 'crear_pago' %}" class="btn btn-primary mb-3">Registrar Nuevo Pago</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Reserva</th>
+            <th>Monto</th>
+            <th>Fecha de Pago</th>
+            <th>Método de Pago</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for pago in pagos %}
+        <tr>
+            <td><a href="{% url 'detalle_pago' pago.id %}">{{ pago.reserva }}</a></td>
+            <td>{{ pago.monto }}</td>
+            <td>{{ pago.fecha_pago }}</td>
+            <td>{{ pago.metodo_pago }}</td>
+            <td>
+                <a href="{% url 'editar_pago' pago.id %}" class="btn btn-secondary btn-sm">Editar</a>
+                <form action="{% url 'eliminar_pago' pago.id %}" method="POST" style="display: inline-block;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

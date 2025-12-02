@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Detalle Reserva{% endblock %}
+
+{% block content %}
+<h2>Detalle de la Reserva</h2>
+<dl class="row">
+    <dt class="col-sm-3">Cliente</dt>
+    <dd class="col-sm-9">{{ reserva.cliente }}</dd>
+
+    <dt class="col-sm-3">Habitación</dt>
+    <dd class="col-sm-9">{{ reserva.habitacion }}</dd>
+
+    <dt class="col-sm-3">Fecha de Entrada</dt>
+    <dd class="col-sm-9">{{ reserva.fecha_entrada }}</dd>
+
+    <dt class="col-sm-3">Fecha de Salida</dt>
+    <dd class="col-sm-9">{{ reserva.fecha_salida }}</dd>
+</dl>
+<a href="{% url 'listar_reservas' %}" class="btn btn-primary">Volver a la Lista</a>
+{% endblock %}

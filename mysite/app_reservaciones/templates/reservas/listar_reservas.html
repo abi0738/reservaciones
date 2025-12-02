@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% csrf_token %}
+{% block title %}Reservas{% endblock %}
+
+{% block content %}
+<h2>Reservas</h2>
+<a href="{% url 'crear_reserva' %}" class="btn btn-primary mb-3">Registrar Nueva Reserva</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Cliente</th>
+            <th>Habitación</th>
+            <th>Fecha de Entrada</th>
+            <th>Fecha de Salida</th>
+            <th>Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for reserva in reservas %}
+        <tr>
+            <td><a href="{% url 'detalle_reserva' reserva.id %}">{{ reserva.cliente }}</a></td>
+            <td>{{ reserva.habitacion }}</td>
+            <td>{{ reserva.fecha_entrada }}</td>
+            <td>{{ reserva.fecha_salida }}</td>
+            <td>
+                <a href="{% url 'editar_reserva' reserva.id %}" class="btn btn-secondary btn-sm">Editar</a>
+                <form action="{% url 'eliminar_reserva' reserva.id %}" method="POST" style="display: inline-block;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-danger btn-sm">Eliminar</button>
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Detalle Pago{% endblock %}
+
+{% block content %}
+<h2>Detalle del Pago</h2>
+<dl class="row">
+    <dt class="col-sm-3">Reserva</dt>
+    <dd class="col-sm-9">{{ pago.reserva }}</dd>
+
+    <dt class="col-sm-3">Monto</dt>
+    <dd class="col-sm-9">{{ pago.monto }}</dd>
+
+    <dt class="col-sm-3">Fecha de Pago</dt>
+    <dd class="col-sm-9">{{ pago.fecha_pago }}</dd>
+
+    <dt class="col-sm-3">Método de Pago</dt>
+    <dd class="col-sm-9">{{ pago.metodo_pago }}</dd>
+</dl>
+<a href="{% url 'listar_pagos' %}" class="btn btn-primary">Volver a la Lista</a>
+{% endblock %}

@@ -1,0 +1,22 @@
+
+{% extends 'base.html' %}
+
+{% block title %}Detalle Cliente{% endblock %}
+
+{% block content %}
+<h2>Detalle del Cliente</h2>
+<dl class="row">
+    <dt class="col-sm-3">Nombre</dt>
+    <dd class="col-sm-9">{{ cliente.nombre }}</dd>
+
+    <dt class="col-sm-3">Teléfono</dt>
+    <dd class="col-sm-9">{{ cliente.telefono }}</dd>
+
+    <dt class="col-sm-3">Email</dt>
+    <dd class="col-sm-9">{{ cliente.email }}</dd>
+
+    <dt class="col-sm-3">Dirección</dt>
+    <dd class="col-sm-9">{{ cliente.direccion }}</dd>
+</dl>
+<a href="{% url 'listar_clientes' %}" class="btn btn-primary">Volver a la Lista</a>
+{% endblock %}
