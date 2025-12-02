@@ -2,3 +2,14 @@
 
 A Django starter template as per the docs: https://docs.djangoproject.com/en/5.0/intro/tutorial01/
 
+<img width="1890" height="612" alt="image" src="https://github.com/user-attachments/assets/b4705a12-6148-41f5-b891-a7ef25c2fc34" />
+<img width="1639" height="598" alt="image" src="https://github.com/user-attachments/assets/0c2af61e-06cf-4870-b5b1-a00f43970d52" />
+<img width="833" height="470" alt="image" src="https://github.com/user-attachments/assets/9e2dbd76-ea96-4fd0-878b-fe06c1bd4674" />
+<img width="1640" height="514" alt="image" src="https://github.com/user-attachments/assets/38878fcf-3257-4b05-95e1-a0e6dbb902ee" />
+<img width="871" height="464" alt="image" src="https://github.com/user-attachments/assets/f808e435-29cb-4f4e-ac90-fe007d8bef7a" />
+<img width="1624" height="523" alt="image" src="https://github.com/user-attachments/assets/d6098057-3b0d-4708-8bff-5d56a922547c" />
+<img width="981" height="460" alt="image" src="https://github.com/user-attachments/assets/0a65cf30-774a-4424-a504-f7aff5d08cd0" />
+<img width="1622" height="543" alt="image" src="https://github.com/user-attachments/assets/e9d226af-cf33-4497-b2d2-96e5fbbc9456" />
+<img width="779" height="380" alt="image" src="https://github.com/user-attachments/assets/f826dfa0-1306-46c2-a97b-8c4fca3b751e" />
+<img width="1614" height="516" alt="image" src="https://github.com/user-attachments/assets/815d7a19-16a6-4c0c-aa99-455cb9234dd1" />
+<img width="876" height="463" alt="image" src="https://github.com/user-attachments/assets/27b00962-63de-4f25-b5fe-e906fe46ab81" />
