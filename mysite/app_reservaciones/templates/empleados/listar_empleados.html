@@ -11,6 +11,7 @@
                 <th>Puesto</th>
                 <th>Salario</th>
                 <th>Fecha de Contratación</th>
+                <th>Email</th>
                 <th>Acciones</th>
             </tr>
         </thead>
@@ -21,6 +22,7 @@
                 <td>{{ empleado.puesto }}</td>
                 <td>{{ empleado.salario }}</td>
                 <td>{{ empleado.fecha_contratacion }}</td>
+                <td>{{ empleado.email }}</td>
                 <td>
                     
                     <a href="{% url 'editar_empleado' empleado.id %}" class="btn btn-warning btn-sm">Editar</a>

@@ -12,6 +12,7 @@
             <th>Habitación</th>
             <th>Fecha de Entrada</th>
             <th>Fecha de Salida</th>
+            <th>Empleado</th>
             <th>Acciones</th>
         </tr>
     </thead>
@@ -22,6 +23,7 @@
             <td>{{ reserva.habitacion }}</td>
             <td>{{ reserva.fecha_entrada }}</td>
             <td>{{ reserva.fecha_salida }}</td>
+            <td>{{ reserva.id_empleado.nombre|default:"N/A" }}</td>
             <td>
                 <a href="{% url 'editar_reserva' reserva.id %}" class="btn btn-secondary btn-sm">Editar</a>
                 <form action="{% url 'eliminar_reserva' reserva.id %}" method="POST" style="display: inline-block;">

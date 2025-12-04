@@ -14,7 +14,7 @@ class HabitacionForm(forms.ModelForm):
 class ReservaForm(forms.ModelForm):
     class Meta:
         model = Reserva
-        fields = ['cliente', 'habitacion', 'fecha_entrada', 'fecha_salida']
+        fields = ['cliente', 'habitacion', 'id_empleado', 'fecha_entrada', 'fecha_salida']
         widgets = {
             'fecha_entrada': forms.DateInput(attrs={'type': 'date'}),
             'fecha_salida': forms.DateInput(attrs={'type': 'date'}),
@@ -31,7 +31,7 @@ class PagoForm(forms.ModelForm):
 class EmpleadoForm(forms.ModelForm):
     class Meta:
         model = Empleado
-        fields = ['nombre', 'puesto', 'salario', 'fecha_contratacion']
+        fields = ['nombre', 'puesto', 'salario', 'fecha_contratacion', 'email']
         widgets = {
             'fecha_contratacion': forms.DateInput(attrs={'type': 'date'}),
         }
