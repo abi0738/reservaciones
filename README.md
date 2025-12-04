@@ -11,5 +11,6 @@ A Django starter template as per the docs: https://docs.djangoproject.com/en/5.0
 <img width="1111" height="541" alt="image" src="https://github.com/user-attachments/assets/19dd709f-aa9b-4a39-8cf3-3ec9ba4de389" />
 <img width="1622" height="543" alt="image" src="https://github.com/user-attachments/assets/e9d226af-cf33-4497-b2d2-96e5fbbc9456" />
 <img width="779" height="380" alt="image" src="https://github.com/user-attachments/assets/f826dfa0-1306-46c2-a97b-8c4fca3b751e" />
-<img width="1614" height="516" alt="image" src="https://github.com/user-attachments/assets/815d7a19-16a6-4c0c-aa99-455cb9234dd1" />
-<img width="876" height="463" alt="image" src="https://github.com/user-attachments/assets/27b00962-63de-4f25-b5fe-e906fe46ab81" />
+<img width="1633" height="616" alt="image" src="https://github.com/user-attachments/assets/8cc22254-3e67-45f4-a114-4cc9aaf4950e" />
+<img width="900" height="514" alt="image" src="https://github.com/user-attachments/assets/b14ad866-5166-470f-a14e-4d817900f6b4" />
+>
